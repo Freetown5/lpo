@@ -1,28 +1,52 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <h1>Testing Database</h1>
+    <ul>
+      <li>Testing li's</li>
+      <!-- <li v-for="item in source">{{ item.online }}</li> -->
+      <!-- <li>{{ source.online[1].url }}</li> -->
+    </ul>
+    {{ source }}
+    <!-- <img src="./assets/logo.png">
+    <hello></hello> -->
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+  // import Hello from './components/Hello
+  import Firebase from 'firebase'
 
-export default {
-  name: 'app',
-  components: {
-    Hello
+  let config = {
+    apiKey: 'AIzaSyCHs1Kln9hhK9Ua5-b48KPRHWcAj6bMN8U',
+    authDomain: 'progsources-2aa3d.firebaseapp.com',
+    databaseURL: 'https://progsources-2aa3d.firebaseio.com',
+    storageBucket: 'progsources-2aa3d.appspot.com',
+    messagingSenderId: '456563027788'
   }
-}
+
+  let app = Firebase.initializeApp(config)
+  let db = app.database()
+
+  let sourceRef = db.ref('learning-type')
+
+  export default {
+    name: 'app',
+    firebase: {
+      source: sourceRef
+    }
+    // components: {
+    //   Hello
+    // }
+  }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*text-align: center;*/
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>

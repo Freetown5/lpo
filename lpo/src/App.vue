@@ -8,8 +8,6 @@
         {{value.url}}  
       </li>
     </ul>
-    <!-- {{ source[0] }} -->
-    <!-- <img src="./assets/logo.png">
     <hello></hello> -->
   </div>
 </template>
@@ -39,11 +37,6 @@
     //   Hello
     // }
   }
-  // methods: {
-  //   function getKeys () {
-  //     let theKeys = Object.keys(Firebase.source)
-  //   }
-  // }
 </script>
 
 <style>

@@ -2,11 +2,13 @@
   <div id="app">
     <h1>Testing Database</h1>
     <ul>
-      <li>Testing li's</li>
-      <!-- <li v-for="item in source">{{ item.online }}</li> -->
-      <!-- <li>{{ source.online[1].url }}</li> -->
+      <li class="space" v-for="(value, key) in source[0]">
+        {{ key }}
+        <br>
+        {{value.url}}  
+      </li>
     </ul>
-    {{ source }}
+    <!-- {{ source[0] }} -->
     <!-- <img src="./assets/logo.png">
     <hello></hello> -->
   </div>
@@ -26,7 +28,6 @@
 
   let app = Firebase.initializeApp(config)
   let db = app.database()
-
   let sourceRef = db.ref('learning-type')
 
   export default {
@@ -38,6 +39,11 @@
     //   Hello
     // }
   }
+  // methods: {
+  //   function getKeys () {
+  //     let theKeys = Object.keys(Firebase.source)
+  //   }
+  // }
 </script>
 
 <style>
@@ -48,5 +54,8 @@
     /*text-align: center;*/
     color: #2c3e50;
     margin-top: 60px;
+  }
+  .space{
+    padding:5px;
   }
 </style>

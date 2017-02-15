@@ -1,14 +1,17 @@
 <template>
   <div id="app">
     <h1>Testing Database</h1>
+    <md-avatar class="md-avatar-icon md-accent">
+      <md-icon>exit_to_app</md-icon>
+    </md-avatar>
     <ul>
       <li class="space" v-for="(value, key) in source[0]">
         {{ key }}
         <br>
-        {{value.url}}  
+        {{ value.url }}  
       </li>
     </ul>
-    <hello></hello> -->
+    <!-- <hello></hello> -->
   </div>
 </template>
 
@@ -26,6 +29,7 @@
 
   let app = Firebase.initializeApp(config)
   let db = app.database()
+
   let sourceRef = db.ref('learning-type')
 
   export default {
@@ -37,6 +41,11 @@
     //   Hello
     // }
   }
+  // methods: {
+  //   function getKeys () {
+  //     let theKeys = Object.keys(Firebase.source)
+  //   }
+  // }
 </script>
 
 <style>
@@ -47,8 +56,5 @@
     /*text-align: center;*/
     color: #2c3e50;
     margin-top: 60px;
-  }
-  .space{
-    padding:5px;
   }
 </style>

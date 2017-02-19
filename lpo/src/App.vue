@@ -1,22 +1,11 @@
 <template>
   <div id="app">
-    <h1>Testing Database</h1>
-    <md-avatar class="md-avatar-icon md-accent">
-      <md-icon>exit_to_app</md-icon>
-    </md-avatar>
-    <ul>
-      <li class="space" v-for="(value, key) in source[0]">
-        {{ key }}
-        <br>
-        {{ value.url }}  
-      </li>
-    </ul>
-    <!-- <hello></hello> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  // import Hello from './components/Hello
+  import Home from './components/Home'
   import Firebase from 'firebase'
 
   let config = {
@@ -36,16 +25,16 @@
     name: 'app',
     firebase: {
       source: sourceRef
-    }
-    // components: {
-    //   Hello
+    },
+    components: {
+      Home
+    },
+    methods: {
+    // function getKeys () {
+    //   let theKeys = Object.keys(Firebase.source)
     // }
+    }
   }
-  // methods: {
-  //   function getKeys () {
-  //     let theKeys = Object.keys(Firebase.source)
-  //   }
-  // }
 </script>
 
 <style>

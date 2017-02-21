@@ -9,7 +9,7 @@
 	export default {
 	  name: 'cost',
 	  data: {
-	  	title: 'Cost Route (from Data)'
+	    title: 'Cost Route (from Data)'
 	  }
 	}
 </script>

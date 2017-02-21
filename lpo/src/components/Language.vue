@@ -9,7 +9,7 @@
 	export default {
 	  name: 'language',
 	  data: {
-	  	title: 'Language Route (from data)'
+	    title: 'Language Route (from data)'
 	  }
 	}
 </script>

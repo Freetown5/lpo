@@ -1,11 +1,6 @@
 <template>
   <div id="app">
     <router-view></router-view>
-   <!--  <li class="space" v-for="(value, key) in source[0]">
-      {{ key }}
-      <br>
-      {{ value.url }}  
-    </li> -->
   </div>
 </template>
 

@@ -11,6 +11,7 @@ import Category from 'components/Category'
 import Language from 'components/Language'
 import Cost from 'components/Cost'
 import NewResource from 'components/NewResource'
+import { store } from './store'
 
 Vue.use(VueFire)
 Vue.use(VueMaterial)
@@ -32,6 +33,7 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

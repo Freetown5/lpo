@@ -8,6 +8,12 @@
     <ul>
       <li>Words</li>
     </ul> 
+
+    <li class="space" v-for="(value, key) in sources[0]">
+      {{ key }}
+      <br>
+      {{ value.url }}
+    </li>
   </div>
 </template>
 
@@ -16,6 +22,11 @@
     name: 'Home',
     data: {
       header: 'Testing Home Page'
+    },
+    computed: {
+      sources () {
+        return this.$store.firebase.source
+      }
     }
   }
 </script>

@@ -9,8 +9,10 @@
 <script>
 	export default {
 	  name: 'newResource',
-	  data: {
-	    title: 'New Resource Route (from data)'
+	  computed: {
+    learningType () {
+      return this.$store.state.learningType
+    }
 	  }
 	}
 </script>

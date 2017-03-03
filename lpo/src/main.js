@@ -12,10 +12,24 @@ import Language from 'components/Language'
 import Cost from 'components/Cost'
 import NewResource from 'components/NewResource'
 import { store } from './store'
+import Firebase from 'firebase'
+import Vuex from 'vuex'
 
 Vue.use(VueFire)
 Vue.use(VueMaterial)
 Vue.use(VueRouter)
+Vue.use(Vuex)
+
+let config = {
+  apiKey: 'AIzaSyCHs1Kln9hhK9Ua5-b48KPRHWcAj6bMN8U',
+  authDomain: 'progsources-2aa3d.firebaseapp.com',
+  databaseURL: 'https://progsources-2aa3d.firebaseio.com',
+  storageBucket: 'progsources-2aa3d.appspot.com',
+  messagingSenderId: '456563027788'
+}
+let app = Firebase.initializeApp(config)
+let db = app.database()
+let sourceRef = db.ref('learning-type')
 
 const routes = [
   {path: '/', component: Home},
@@ -34,6 +48,12 @@ new Vue({
   el: '#app',
   router,
   store,
+  computed: Vuex.mapGetters([
+    'learning-type'
+  ]),
+  firebase: {
+    learningType: sourceRef
+  },
   template: '<App/>',
   components: { App }
 })

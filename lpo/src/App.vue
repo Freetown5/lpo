@@ -5,7 +5,7 @@
 </template>
 
 
-<style>
+<style lang="scss">
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -14,5 +14,9 @@
     color: #2c3e50;
     margin-top: 60px;
     margin:10px;
+  }
+
+  h1{
+    font-family: sans-serif;
   }
 </style>

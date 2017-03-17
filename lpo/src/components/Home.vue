@@ -31,21 +31,21 @@
 
 <style lang="scss" scoped>
 /* tried setting padding and margin of all outer containers to 0, didn't work */
+  $blue: #0114DD;
+  $middle-grey:#A2A2A0;
 
   .home{
     margin: 0 auto;
     padding:0 auto; 
     height: 100vh;
     display: block;
-    background-color:#A2A2A0;
+    background-color:$middle-grey;
+    
+    &_container{
+      margin-top: 33%;
+      margin-left: 10%;
+    }
   }
-
-  .home_container{
-    margin-top: 33%;
-    margin-left: 10%;
-  }
-
-  $blue: #0114DD;
 
   .test-sass{
     font-size:3em;

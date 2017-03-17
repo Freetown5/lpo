@@ -5,7 +5,7 @@
       <!-- logo -->
       <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50">
         <div class="home_container">
-          <h1 class="test-sass">Logo Here</h1>
+          <h1>Logo Here</h1>
         </div>
       </md-layout>
 
@@ -31,27 +31,17 @@
 
 <style lang="scss" scoped>
 /* tried setting padding and margin of all outer containers to 0, didn't work */
-  $blue: #0114DD;
   $middle-grey:#A2A2A0;
 
   .home{
-    margin: 0 auto;
-    padding:0 auto; 
-    height: 100vh;
+    margin: -10px;
+    height: 110vh;
     display: block;
-    background-color:$middle-grey;
-    
+    background-color: $middle-grey;
+
     &_container{
       margin-top: 33%;
       margin-left: 10%;
-    }
-  }
-
-  .test-sass{
-    font-size:3em;
-    .nested-text{
-      font-size: .5em;
-      color: $blue;
     }
   }
 </style>

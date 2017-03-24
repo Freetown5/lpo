@@ -15,7 +15,7 @@
           <!-- <md-avatar class="md-avatar-icon md-accent">
             <md-icon>exit_to_app</md-icon>
           </md-avatar> -->
-          <i class="material-icons">keyboard_arrow_left</i>
+          <i class="material-icons" v-on:click="slide">keyboard_arrow_left</i>
           <p class="home_intro">{{ content[2] }}</p>
           <i class="material-icons">keyboard_arrow_right</i>
         </div>
@@ -36,6 +36,11 @@
           'Then, continue narrowing down the sources you want by entering more information about what you are looking for before clicking "filter".',
           'After you\'ve gotten the results you wanted, find out more about each of the choices listed by clicking on the learn more button next to it.',
           'Have fun learning!!' ]
+      }
+    },
+    methods () {
+      function slide () {
+        console.log('slider is attached')
       }
     }
   }

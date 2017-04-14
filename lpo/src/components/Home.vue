@@ -15,9 +15,9 @@
           <!-- <md-avatar class="md-avatar-icon md-accent">
             <md-icon>exit_to_app</md-icon>
           </md-avatar> -->
-          <i class="material-icons" v-on:click="slide()">keyboard_arrow_left</i>
+          <i class="material-icons" v-on:click="consoleWorking()">keyboard_arrow_left</i>
           <p class="home_intro">{{ content[1] }}</p>
-          <i class="material-icons" v-on:click="slide()">keyboard_arrow_right</i>
+          <i class="material-icons" v-on:click="consoleWorking()">keyboard_arrow_right</i>
         </div>
       </md-layout>
     </md-layout>
@@ -40,8 +40,8 @@
       }
     },
     methods: {
-      slide: function () {
-        console.log('the slider buttons work')
+      consoleWorking () {
+        console.log('console working?')
       }
     }
   }

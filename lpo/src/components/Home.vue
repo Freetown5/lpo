@@ -1,7 +1,7 @@
 <template>
-  <div class="newResource">
+  <div class="home">
      <!-- <h1>{{ header }}</h1> -->
-    <h1>Routing is making me fucking crazy: Home</h1>
+    <h1>{{ header[1] }}</h1>
     <md-avatar class="md-avatar-icon md-accent">
       <md-icon>exit_to_app</md-icon>
     </md-avatar>
@@ -13,9 +13,15 @@
 
 <script>
   export default {
-    name: 'Home',
-    data: {
-      header: 'Testing Home Page'
+    name: 'home',
+    data: function () {
+      return {
+        header: [
+          'words',
+          'more words',
+          'even more words'
+        ]
+      }
     }
   }
 </script>

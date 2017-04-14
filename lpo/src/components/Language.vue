@@ -7,10 +7,7 @@
 
 <script>
 	export default {
-	  name: 'language',
-	  data: {
-	  	title: 'Language Route (from data)'
-	  }
+	  name: 'language'
 	}
 </script>
 

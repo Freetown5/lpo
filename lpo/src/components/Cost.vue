@@ -7,10 +7,7 @@
 
 <script>
 	export default {
-	  name: 'cost',
-	  data: {
-	  	title: 'Cost Route (from Data)'
-	  }
+	  name: 'cost'
 	}
 </script>
 

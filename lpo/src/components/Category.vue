@@ -7,10 +7,7 @@
 
 <script>
 	export default {
-	  name: 'category',
-	  data: {
-        title: 'Testing Category Route (from data)'
-      }
+	  name: 'category'
 	}
 </script>
 

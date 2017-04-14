@@ -5,6 +5,7 @@
     <md-avatar class="md-avatar-icon md-accent">
       <md-icon>exit_to_app</md-icon>
     </md-avatar>
+    <button>Get something in console</button>
     <ul>
       <li>Words</li>
     </ul> 
@@ -21,6 +22,13 @@
           'more words',
           'even more words'
         ]
+      }
+    },
+    methods: function () {
+      return {
+        consoleWorking: function () {
+          console.log('console working?')
+        }
       }
     }
   }

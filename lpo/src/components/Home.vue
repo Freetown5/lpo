@@ -15,8 +15,8 @@
           <!-- <md-avatar class="md-avatar-icon md-accent">
             <md-icon>exit_to_app</md-icon>
           </md-avatar> -->
-          <i class="material-icons" v-on:click="consoleWorking()">keyboard_arrow_left</i>
-          <p class="home_intro">{{ content[1] }}</p>
+          <i class="material-icons" v-on:click="content[0] = 'some words'">keyboard_arrow_left</i>
+          <p id="home_intro">{{ content[0] }}</p>
           <i class="material-icons" v-on:click="consoleWorking()">keyboard_arrow_right</i>
         </div>
       </md-layout>
@@ -41,7 +41,15 @@
     },
     methods: {
       consoleWorking () {
-        console.log('console working?')
+        var homeIntroContent = document.getElementById('home_intro').innerHTML
+        console.log(homeIntroContent)
+        console.log(this.content[1])
+
+        if (homeIntroContent === this.content[0]) {
+          console.log("It's Equal!!!")
+          homeIntroContent = this.content[1]
+          console.log(homeIntroContent)
+        }
       }
     }
   }

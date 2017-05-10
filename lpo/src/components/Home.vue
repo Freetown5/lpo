@@ -1,28 +1,40 @@
 <template>
   <div class="home">
     
-    <md-layout md-gutter>
+    <div class="home_content">
+      <md-layout md-gutter>
       <!-- logo -->
-      <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50">
-        <div class="home_container">
-          <h1>Logo Here</h1>
-        </div>
-      </md-layout>
+        <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50">
+          <div class="home_container">
+            <h1>Logo Here</h1>
+          </div>
+        </md-layout>
 
-      <!-- sliding content -->
-      <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50">
-        <div class="home_container">
-          <!-- <md-avatar class="md-avatar-icon md-accent">
-            <md-icon>exit_to_app</md-icon>
-          </md-avatar> -->
-          <i class="material-icons" v-on:click="content[0] = 'some words'">keyboard_arrow_left</i>
-          <p id="home_intro">{{ content[0] }}</p>
-          <i class="material-icons" v-on:click="consoleWorking()">keyboard_arrow_right</i>
-        </div>
+        <!-- sliding content -->
+        <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50">
+          <div class="home_container">
+            <!-- <md-avatar class="md-avatar-icon md-accent">
+              <md-icon>exit_to_app</md-icon>
+            </md-avatar> -->
+            <i class="material-icons" v-on:click="content[0] = 'some words'">keyboard_arrow_left</i>
+            <p id="home_intro">{{ content[0] }}</p>
+            <i class="material-icons" v-on:click="consoleWorking()">keyboard_arrow_right</i>
+          </div>
+        </md-layout>
       </md-layout>
-    </md-layout>
-
+    </div>
   <!-- Icons are not extended so they have their original class names-->
+<!-- Nav bar -->
+    <!-- <nav> -->
+    <div class="phone-viewport">
+      <md-bottom-bar class="home_nav">
+        <md-bottom-bar-item class="home_nav--item"><a href="/#/category">Category</a></md-bottom-bar-item>
+        <md-bottom-bar-item class="home_nav--item"><a href="/#/language">Language</a></md-bottom-bar-item>
+        <md-bottom-bar-item class="home_nav--item"><a href="/#/cost">Cost</a></md-bottom-bar-item>
+        <md-bottom-bar-item class="home_nav--item"><a href="/#/newResource">New Resource</a></md-bottom-bar-item>
+      </md-bottom-bar>
+    </div>
+    <!-- </nav> -->
   </div>
 </template>
 
@@ -42,12 +54,12 @@
     methods: {
       consoleWorking () {
         var homeIntroContent = document.getElementById('home_intro').innerHTML
-        console.log(homeIntroContent)
-        console.log(this.content[1])
+        // console.log(homeIntroContent)
+        // console.log(this.content[1])
 
         if (homeIntroContent === this.content[0]) {
           console.log("It's Equal!!!")
-          homeIntroContent = this.content[1]
+          homeIntroContent = this.content[2]
           console.log(homeIntroContent)
         }
       }
@@ -62,7 +74,7 @@
 
   .home{
     margin: -10px;
-    height: 110vh;
+    height: 100vh;
     display: block;
     background-color: $middle-grey;
 
@@ -75,6 +87,14 @@
     &_intro{
       width:70%;
       float:left;
+    }
+
+    &_nav{
+      margin-top: 18%;
+      position: relative;
+      &--item{
+        margin-top:1%;
+      }
     }
   }
 

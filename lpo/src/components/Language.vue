@@ -1,10 +1,25 @@
 <template>
 	<div class="language">
-		<h1>Language Route Working</h1>
-		<p>testing with multiple nodes</p>
-		<li class="space" v-for="(value, key) in learningType[0]">
-		  <strong>{{ key }}</strong>:{{ value.languages }} 
-	  </li>
+		<md-toolbar class="language_nav">
+			<!-- <span class="category_nav"> -->
+				<p class="md-title"><a href="/#/category">Category</a></p>
+				<p class="md-title"><a href="/#/language">Language</a></p>
+				<p class="md-title"><a href="/#/cost">Cost</a></p>
+				<p class="md-title"><a href="/#/newResource">New Resource</a></p>
+			<!-- </span> -->
+		</md-toolbar>
+
+		<md-layout md-gutter>
+			<md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50">
+				<h1 class="language_title">Search By: Language Route</h1>
+			</md-layout>
+
+			<md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50">
+				<li class="space" v-for="(value, key) in learningType[0]">
+		  		<strong>{{ key }}</strong>:{{ value.languages }} 
+	  			</li>
+	  		</md-layout>
+	  	</md-layout>
 	</div>
 </template>
 
@@ -20,4 +35,9 @@
 </script>
 
 <style lang="scss" scoped>
+	$light-grey:#DCDCDA;
+
+	.language{
+		background-color: $light-grey;
+	}
 </style>

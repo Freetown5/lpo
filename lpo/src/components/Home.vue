@@ -6,7 +6,7 @@
       <!-- logo -->
         <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50">
           <div class="home_container">
-            <h1>Logo Here</h1>
+            <!-- <h1 class="home_logo-top">Compute</h1> -->
           </div>
         </md-layout>
 
@@ -70,13 +70,13 @@
 <style lang="scss" scoped>
 /* tried setting padding and margin of all outer containers to 0, didn't work */
 
-  $middle-grey:#A2A2A0;
-
+  $light-grey:#DCDCDA;
+  
   .home{
     margin: -10px;
     height: 100vh;
     display: block;
-    background-color: $middle-grey;
+    background-color: $light-grey;
 
     &_container{
       margin-top: 33%;

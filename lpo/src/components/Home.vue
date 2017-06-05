@@ -69,15 +69,8 @@
 
 <style lang="scss" scoped>
 /* tried setting padding and margin of all outer containers to 0, didn't work */
-
-  $light-grey:#DCDCDA;
   
   .home{
-    margin: -10px;
-    height: 100vh;
-    display: block;
-    background-color: $light-grey;
-
     &_container{
       margin-top: 33%;
       margin-left: 10%;

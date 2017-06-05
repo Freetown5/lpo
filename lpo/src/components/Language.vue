@@ -12,6 +12,20 @@
 		<md-layout md-gutter>
 			<md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50">
 				<h1 class="language_title">Search By: Language Route</h1>
+
+				<md-layout md-column md-gutter>
+					<md-layout md-flex>
+						<p class="language_label--description"> Description:</p>
+						<p class="language_writtenContent">
+							Here, you can find our what online resources are best for you by filtering based on which progamming language you wish to learn.
+						</p>
+					</md-layout>
+
+					<md-layout md-flex>
+						<p class="language_label--instructions">Instructions:</p>
+						<p class="category_writtenContent">click on the arrow in the dropdown menu to see all options and then select a language by clicking on it. Select multiple languages by holding down the shift key while clicking. Each option your filtering by should appear below the menu.</p>
+					</md-layout>
+				</md-layout>
 			</md-layout>
 
 			<md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50">
@@ -38,6 +52,35 @@
 	$light-grey:#DCDCDA;
 
 	.language{
+		margin: -10px;
 		background-color: $light-grey;
+
+		&_writtenContent{
+			margin: 2%;
+		}
+
+		&_title{
+			margin-top: 10%;
+			margin-left: 25%;
+			margin-right: 25%;
+			text-align: center;
+		}
+
+		&_label--description{
+			margin: 2%;
+			margin-bottom: -.5%;
+			font-weight: bold;
+		}
+
+		&_label--instructions{
+			margin: 2%;
+			margin-top: 5%;
+			margin-bottom: -3%;
+			font-weight: bold;
+		}
+	}
+
+	.md-title{
+		margin-left: 3%;
 	}
 </style>

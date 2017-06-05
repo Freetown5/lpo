@@ -26,10 +26,11 @@
 					</md-layout>
 
 					<md-layout md-flex>
-						<div>
-							<md-radio v-model="online" id="online" name="online" value="online">Tutorial</md-radio>
-							<md-radio v-model="openSource" id="openSource" name="open-source" value="openSource">Open Source Projects</md-radio>
-							<md-radio v-model="mentors" id="mentor" name="mentors" value="mentors">Mentorship</md-radio>
+						<div class="category_radioSelect">
+						<!-- Try using the same model name for both options in v-model -->
+							<md-radio id="online" name="online" v-model="online" md-value="online">Tutorial</md-radio>
+							<md-radio id="openSource" name="open-source" v-model="openSource" md-value="openSource">Open Source Projects</md-radio>
+							<md-radio v-model="mentors" id="mentor" name="mentors" md-value="mentors">Mentorship</md-radio>
 						</div>
 					</md-layout>
 
@@ -77,30 +78,24 @@
 <script>
   export default {
     name: 'category',
-    data () {
-    	return {
-    		online: '',
-    		openSource: '',
-    		mentors: ''
-    	}
-    },
     computed: {
       learningType () {
         return this.$store.state.learningType
+      }
+    },
+    data () {
+      return {
+        online: '',
+        openSource: '',
+        mentors: ''
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-	$light-grey: #DCDCDA;
 	
 	.category{
-		margin: -10px;
-		padding-top: 2%;
-	    height: 100vh;
-	    display: block;
-	    background-color: $light-grey;
 
 	    &_nav{
 	    	margin-top:-2%;
@@ -129,6 +124,12 @@
 	    	margin-top: 5%;
 	    	margin-bottom: -3%;
 	    	font-weight: bold;
+	    }
+
+	    &_radioSelect{
+	    	margin: 2%;
+	    	margin-left: 30%;
+	    	width: 30%;
 	    }
 	}
 	.md-title{

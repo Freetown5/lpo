@@ -8,10 +8,24 @@ import App from './App'
 import VueRouter from 'vue-router'
 import Home from 'components/Home'
 import NewResource from 'components/NewResource'
+import './firebase'
 
 Vue.use(VueFire)
 Vue.use(VueMaterial)
 Vue.use(VueRouter)
+// Vue.component('app-home', Home)
+
+// let config = {
+//   apiKey: 'AIzaSyCHs1Kln9hhK9Ua5-b48KPRHWcAj6bMN8U',
+//   authDomain: 'progsources-2aa3d.firebaseapp.com',
+//   databaseURL: 'https://progsources-2aa3d.firebaseio.com',
+//   storageBucket: 'progsources-2aa3d.appspot.com',
+//   messagingSenderId: '456563027788'
+// }
+
+// let app = Firebase.initializeApp(config)
+// let db = app.database()
+// let sourceRef = db.ref('learning-type')
 
 const routes = [
   {path: '/', component: Home},
@@ -26,6 +40,9 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
+  // firebase: {
+  //   learningType: sourceRef
+  // },
   template: '<App/>',
   components: { App }
 })

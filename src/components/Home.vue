@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-     <!-- <h1>{{ header }}</h1> -->
     <h1>{{ header }}</h1>
     <md-avatar class="md-avatar-icon md-accent">
       <md-icon>exit_to_app</md-icon>
